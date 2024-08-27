@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Electric Bill Management</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="alert-box" id="custom-alert">
+        <p id="alert-message"></p>
+        <button class="close-btn" style="background-color:darkred; color:white;"onclick="closeAlert()">Close</button>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <!-- <li><a href="/register.html">Register</a></li> -->
+                <!-- <li><a href="/paybill.html">Pay Bill</a></li>
+                <li><a href="/registercomplainpage.html">Complaint</a></li>
+                <li><a href="/complainstatus.html">Complaint Status</a></li> -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Login</h1>
+        
+        <form  onsubmit="return loginvalidate()">
+            <label for="user-id">User ID:</label>
+            <input type="text" id="user-id" placeholder="Enter your UserID" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <div class="form-footer">
+                <a href="register.html" class="forgot-password">Don't have a account register  ??? here....</a>
+                <button type="submit" >Login</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

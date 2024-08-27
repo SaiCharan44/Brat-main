@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Complaint - Electric Bill Management</title>
+    <link rel="stylesheet" href="registercomplainpage.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-left">
+                <li><a href="userhomepage.html">Home</a></li>
+                <li><a href="paybill.html">Pay Bill</a></li>
+                <li><a href="registercomplainpage.html">Register Complaint</a></li>
+                <li><a href="complainstatus.html">Complaint Status</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li>Welcome, <span id="username">[Username]</span></li>
+                <li><a href="homepage.html" class="logout-button">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>File a New Complaint</h1>
+        <form class="complaint-form" action="complainsuccess.html">
+            <label for="complaint-type">
+                Complaint/Service Type:
+                <select id="complaint-type" name="complaint-type">
+                    <option value="service">Service</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="billing">Billing</option>
+                    <option value="other">Other</option>
+                </select>
+            </label>
+            <label for="landmark">
+                Landmark:
+                <input type="text" id="landmark" placeholder="Enter your landmark" required>
+            </label>
+            <label for="category">
+                Category:
+                <select id="category">
+                    <option value="electricity">Electricity</option>
+                    <option value="meter">Meter</option>
+                    <option value="service">Service</option>
+                    <option value="billing">Billing</option>
+                </select>
+            </label>
+            <label for="consumer-number">
+                Consumer Number:
+                <input type="text" id="consumer-number" placeholder="Enter your consumer number" pattern="\d{13}" required>
+            </label>
+            <label for="contact-person">
+                Consumer Name:
+                <input type="text" id="consumer-name" placeholder="Enter your name"" required>
+            </label>
+            <label for="problem-description">
+                Problem Description:
+                <textarea id="problem-description" placeholder="Enter problem description" rows="4" required></textarea>
+            </label>
+            <label for="mobile-number">
+                Mobile Number:
+                <input type="text" id="mobile-number" placeholder="Enter your Mobile Number" pattern="\d{10}" required>
+            </label>
+            <label for="address">
+                Address:
+                <textarea id="address" placeholder="Enter your Address" rows="3" required></textarea>
+            </label>
+            <div class="form-buttons">
+                <button type="button">Cancel</button>
+                <button type="submit" onclick="registercomplainvalidate()" >Submit Complaint</button>
+            </div>
+        </form>
+    </main>
+    <script>
+        window.onload=displayname();
+    </script>
+</body>
+</html>

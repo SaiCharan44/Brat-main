@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Electric Bill Management</title>
+    <link rel="stylesheet" href="register.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="alert-box" id="custom-alert">
+        <p id="alert-message"></p>
+        <button class="close-btn" style="background-color:darkred; color:white;"onclick="closeAlert()">Close</button>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <!-- <li><a href="/registercomplainpage.html">Complaint</a></li>
+                <li><a href="/complainstatus.html">Complaint Status</a></li>  -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Register</h1>
+        <form id="registration-form" onsubmit="return validate()">
+            <fieldset>
+                <legend>Consumer Details</legend>
+                <label for="consumer-number">Consumer Number:</label>
+                <input type="text" id="consumer-number" placeholder="Enter 13 digits Consumer Number" maxlength="13" required>
+                <label for="bill-number">Bill Number:</label>
+                <input type="text" id="bill-number" placeholder="Enter last 5 digits Bill Number" maxlength="5" required>
+            </fieldset>
+            <fieldset>
+                <legend>User Details</legend>
+                <label for="title">Title:</label>
+                <select id="title" name="title" required>
+                    <option value="mr">Mr</option>
+                    <option value="ms">Ms</option>
+                </select>
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <select id="title" name="title" required>
+                    <option value="ind">+91 India</option>
+                    <option value="USA">+1 USA</option>
+                    <option value="chn">+86 China</option>
+                    <option value="jpn">+81 Japan</option>
+                </select>
+                <label for="mobile-number">Mobile Number</label>
+                <input type="tel" id="mobile-number" placeholder="Enter your mobile number" required>
+            </fieldset>
+            <fieldset>
+                <legend>Login Details</legend>
+                <label for="user-id">User ID:</label>
+                <input type="text" id="user-id" placeholder="Enter a 5 digit UserID" maxlength="5" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="password" required>
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" placeholder="confirm password" required>
+            </fieldset>
+            <div class="form-buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+        
+    </main>
+
+</body>
+</html>

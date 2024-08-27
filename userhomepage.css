@@ -1,0 +1,76 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-left, .nav-right {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-left li, .nav-right li {
+    margin: 0 15px;
+}
+
+.nav-left a, .nav-right a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    display: block;
+}
+
+.nav-left a:hover, .nav-right a:hover {
+    background-color: #14d88a; /* Slightly darker blue */
+    border-radius: 4px;
+}
+
+.nav-right li {
+    color: white;
+}
+
+.logout-button {
+    background-color: #ff4d4d; /* Red for Logout */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.logout-button:hover {
+    background-color: #e60000; /* Darker red for hover */
+}
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #0d0e0d; /* Matching the navbar color */
+}
+
+p {
+    color: #666; /* Darker gray for text */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #141414;
+    background-image: url("https://media.istockphoto.com/id/1340413200/photo/aerial-view-of-a-high-voltage-substation.jpg?s=612x612&w=0&k=20&c=Nat7fUcivRPMID1-CowPHC7o-D_2R3E-8Tb2K9qf_14=");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+      background-position: center;
+      height: 100vh;
+}
+
+header {
+    background-color:#14d88a; /* Dark Blue for Electricity */
+    padding: 10px 0;
+}

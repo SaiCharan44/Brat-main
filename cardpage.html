@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Electric Bill Management</title>
+    <link rel="stylesheet" href="cardpage.css">
+    <script src="paybill.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-left">
+                <li><a href="userhomepage.html">Home</a></li>
+                <li><a href="paybill.html">Pay Bill</a></li>
+                <li><a href="registercomplainpage.html">Register Complaint</a></li>
+                <li><a href="complainstatus.html">Complaint Status</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li>Welcome, <span id="username">[Username]</span></li>
+                <li><a href="homepage.html" class="logout-button">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Credit/Debit Card Payment</h1>
+        <form class="payment-form" action="billpage.html">
+            <select id="cardtype" name="cardtype" required>
+                <option value="" disabled selected>Select Card Type</option>
+                <option value="Credit Card">Credit Card</option>
+                <option value="Debit Card">Debit Card</option>
+            </select>
+            <label for="card-number">
+                Card Number:
+                <input type="text" id="card-number" name="card-number" pattern="[0-9]{16}" placeholder="Please enter your card number" required>
+            </label>
+            <div class="expiration-date">
+                <label for="exp-month">
+                    Expiration Date:
+                    <div class="expiration-date-fields">
+                        <select id="exp-month" name="exp-month" required>
+                            <option value="" disabled selected>Month</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select id="exp-year" name="exp-year" required>
+                            <option value="" disabled selected>Year</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                        </select>
+                    </div>
+                </label>
+            </div>
+            <label for="card-holder">
+                Card Holder Name:
+                <input type="text" id="card-holder"  placeholder="Enter name as per the card" required>
+            </label>
+            <label for="payment-amount">
+                Payment Amount:
+                <!-- <input type="text" id="payment-amount" name="payment-amount" placeholder="100.00" required> -->
+                 <p id="payment-amount">₹   </p>
+            </label>
+            <button type="submit" onclick="payment()">Make Payment</button>
+        </form>
+    </main>
+    <script>
+        window.onload=amount();
+        window.onload=displayname();
+    </script>
+</body>
+</html>

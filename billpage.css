@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #14d88a; /* Dark Blue for Electricity */
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-left, .nav-right {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-left li, .nav-right li {
+    margin: 0 15px;
+}
+
+.nav-left a, .nav-right a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    display: block;
+}
+
+.nav-left a:hover, .nav-right a:hover {
+    background-color: #14d88a; /* Slightly darker blue */
+    border-radius: 4px;
+}
+
+.nav-right li {
+    color: white;
+}
+.logout-button {
+    background-color: #ff4d4d; /* Red for Logout */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.logout-button:hover {
+    background-color: #e60000; /* Darker red for hover */
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#transaction-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+#transaction-table th, #transaction-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#transaction-table th {
+    background-color: #f4f4f4;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    background-color: #14d88a;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #14d88a;
+}
